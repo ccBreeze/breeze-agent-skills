@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile>
+  <diagram id="GeneratedDiagram" name="自动生成的图表">
+    <mxGraphModel dx="1851" dy="1191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 标题 -->
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=20;fillColor=none;strokeColor=none;" value="&lt;b&gt;标题&lt;/b&gt;" vertex="1">
+          <mxGeometry x="500" y="40" width="300" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 核心流程节点：fillColor=<核心节点填充>;strokeColor=<核心节点边框>;strokeWidth=3;shadow=1 -->
+        <!-- 辅助配置面板：fillColor=<弱化元素填充>;strokeColor=<弱化元素边框>;strokeWidth=2 -->
+        <!-- 核心流程连线：edgeStyle=orthogonalEdgeStyle;rounded=1;jumpStyle=arc;jumpSize=6;endArrow=classic;strokeColor=<核心节点边框>;strokeWidth=4 -->
+        <!-- 辅助连线：strokeColor=<弱化元素边框>;strokeWidth=2 -->
+        <!-- 功能模块容器 + 子节点：容器 fillColor=<容器背景填充>;子节点 fillColor=<功能节点填充> -->
+        <!-- 详情展开线：dashed=1;dashPattern=8 4;strokeColor=<弱化元素边框>;strokeWidth=2 -->
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
