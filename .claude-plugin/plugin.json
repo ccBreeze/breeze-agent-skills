@@ -1,0 +1,21 @@
+{
+  "name": "breeze-agent-skills",
+  "version": "1.0.0",
+  "description": "面向前端与 Monorepo 工作流的 Agent Skills 合集，支持 Claude Code 与 Codex。",
+  "author": {
+    "name": "Breeze"
+  },
+  "homepage": "https://github.com/ccBreeze/breeze-agent-skills",
+  "repository": "https://github.com/ccBreeze/breeze-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "frontend",
+    "monorepo",
+    "commit",
+    "docs",
+    "vitepress",
+    "drawio"
+  ],
+  "skills": "./.agents/skills/"
+}

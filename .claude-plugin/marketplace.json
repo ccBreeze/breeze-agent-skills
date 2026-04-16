@@ -1,0 +1,18 @@
+{
+  "name": "breeze-agent-skills",
+  "owner": {
+    "name": "Breeze"
+  },
+  "metadata": {
+    "description": "面向前端与 Monorepo 工作流的 Agent Skills 合集",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "breeze-agent-skills",
+      "description": "面向前端与 Monorepo 工作流的 Agent Skills 合集，支持 Claude Code 与 Codex。",
+      "version": "1.0.0",
+      "source": "./"
+    }
+  ]
+}
