@@ -26,6 +26,14 @@ description: 分析暂存区变更，生成符合规范的 commit message 并提
 - 用于列举补充说明，分条书写
 - 保持简洁概括，不要罗列从 diff 中即可看到的具体名称（如包名、文件名）
 
+### 禁止项
+
+- **禁止**在 commit message 末尾追加 `Co-Authored-By: Claude ...` 等署名行
+- **禁止**添加 `Generated with Claude Code` 之类的工具生成标识
+- **禁止**把 heredoc 的 `EOF` 结束符等 shell 语法残留写进 message
+
+commit message 必须保持干净，只包含 `<type>(<scope>): <description>` 首行和可选的分条 body。
+
 ### 示例
 
 ```
