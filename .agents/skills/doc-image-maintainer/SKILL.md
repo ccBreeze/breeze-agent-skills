@@ -36,6 +36,23 @@ description: 维护 Markdown 文档图片资源的一致性与可追踪性。用
 
 - 只改写真实图片引用，不改正文说明文本、代码块、示例代码字符串。
 - 引用路径统一使用相对写法（如 `./imgs/asset-path-figure-01.png`）。
+- 单张图片默认使用 HTML `<img>` 形式，并统一添加 `style="display: block; width: 80%; margin: 0 auto;"`，保证居中展示与版式一致。
+- 若存在上下连续的两张图片，优先改为网格布局容器包裹，例如：
+
+```html
+<div style="display: grid; grid-template-columns: 0.5fr 1fr; gap: 16px; align-items: start;">
+  <img src="./imgs/asset-path-figure-01.png" />
+  <img src="./imgs/asset-path-figure-09.png" />
+</div>
+```
+
+- `grid-template-columns` 的默认规则：
+  - 两张图视觉宽度接近、信息密度接近时，优先使用 `1fr 1fr`。
+  - 若左图明显更窄，或左图是局部截图、流程局部、说明性配图，而右图是主体内容时，使用 `0.5fr 1fr`。
+  - 若两图比例存在差异但未达到明显主次关系，优先使用接近的简洁比例（如 `0.6fr 0.4fr`），避免随意使用难以复用的列宽值。
+  - 选择列宽时以“最终阅读版式平衡”为准，不要求与原始图片像素宽度完全一致。
+- 若文档明确使用并排对比、网格布局等容器包裹图片，则保留该布局。
+- 若使用网格布局，不要在容器内的 `<img>` 上保留无用的 `style`（如 `display: block; width: 80%; margin: 0 auto;`），避免重复样式干扰布局。
 
 5. 清理未引用图片
 
