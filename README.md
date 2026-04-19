@@ -60,3 +60,28 @@ Fetch and follow instructions from https://raw.githubusercontent.com/ccBreeze/br
     └── generate-drawio/
         └── SKILL.md
 ```
+
+## Skills 文档
+
+### 入门介绍
+
+- [What are Skills?](https://agentskills.io/what-are-skills)
+- [Skills for Claude](https://claude.com/blog/skills)
+- [skills 商店](https://skills.sh/)
+
+## 推荐 Skills
+
+### 资源合集
+
+- [anthropics/skills](https://github.com/anthropics/skills)
+- [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)：收集社区中较常见的 Claude skills
+
+### 个人工作流
+
+- [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)：改善 Claude Code 的行为
+- [build-with-agent-team](https://github.com/coleam00/context-engineering-intro/blob/main/use-cases/build-with-agent-team/README.md)：多 Agent 协作。
+- [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)
+
+### 设计相关
+
+- [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
