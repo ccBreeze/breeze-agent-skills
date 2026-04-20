@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Push PR"
+  short_description: "提交当前分支、推送远端并在条件满足时自动创建 PR"
+  default_prompt: "Use $git-push-pr to commit the current task changes, push the branch, and open a pull request with a concise title and description."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Clean Gone"
+  short_description: "安全清理 upstream 已消失且可删除的本地 Git 分支"
+  default_prompt: "Use $git-clean-gone to prune remotes, detect local gone branches, and delete only the branches that are safe to remove."

@@ -4,13 +4,16 @@
 
 ## Skills
 
-| Skill                  | 描述                                          |
-| ---------------------- | --------------------------------------------- |
-| `doc-writer`           | 新建与维护 VitePress 文档页面                 |
-| `doc-image-maintainer` | 迁移、重命名并清理 Markdown 图片资源          |
-| `generate-drawio`      | 根据代码或描述生成 DrawIO 架构流程图          |
+| Skill                  | 描述                                    |
+| ---------------------- | --------------------------------------- |
+| `git-commit`           | 审查当前改动并生成高质量 Git 提交       |
+| `git-push-pr`          | 提交当前分支、推送远端并在合适时创建 PR |
+| `git-clean-gone`       | 安全清理 upstream 已消失的本地 Git 分支 |
+| `doc-writer`           | 新建与维护 VitePress 文档页面           |
+| `doc-image-maintainer` | 迁移、重命名并清理 Markdown 图片资源    |
+| `generate-drawio`      | 根据代码或描述生成 DrawIO 架构流程图    |
 
-> 提交信息生成改用官方 [`commit-commands`](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/commit-commands/README.md) skill，详见下文「推荐 Skills · 配置与协作规范」。
+> Codex 侧内置了对官方 [`commit-commands`](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/commit-commands/README.md) 的适配版本，分别对应 `$git-commit`、`$git-push-pr`、`$git-clean-gone`。
 
 ## 安装
 
@@ -34,30 +37,6 @@
 
 ```
 Fetch and follow instructions from https://raw.githubusercontent.com/ccBreeze/breeze-agent-skills/main/.codex/INSTALL.md
-```
-
-## 目录结构
-
-```
-.claude-plugin/
-├── marketplace.json   # Claude Code 插件市场清单
-└── plugin.json        # Claude Code 插件清单（skills 指向 .agents/skills/）
-.codex/
-└── INSTALL.md         # Codex 全局安装指引
-.agents/
-└── skills/
-    ├── doc-writer/
-    │   ├── SKILL.md
-    │   ├── agents/
-    │   │   └── openai.yaml
-    │   └── references/
-    │       └── vitepress-docs.md
-    ├── doc-image-maintainer/
-    │   ├── SKILL.md
-    │   └── agents/
-    │       └── openai.yaml
-    └── generate-drawio/
-        └── SKILL.md
 ```
 
 ## Skills 文档
@@ -87,8 +66,9 @@ Fetch and follow instructions from https://raw.githubusercontent.com/ccBreeze/br
 
 ### 头脑风暴 / 需求设计
 
+- [github/spec-kit](https://github.com/github/spec-kit)：优先推荐。
+- [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec)：更轻量
 - [obra/superpowers](https://github.com/obra/superpowers)：头脑风暴 + 子代理
-- [anthropics/claude-plugins-official · feature-dev](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/feature-dev/README.md)：特性开发工作流
 
 ### 代码质量
 
@@ -99,6 +79,7 @@ Fetch and follow instructions from https://raw.githubusercontent.com/ccBreeze/br
 ### Agent 工具
 
 - [anthropics/claude-plugins-official · skill-creator](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/skill-creator/README.md)：新建 skill 脚手架
+- [anthropics/claude-plugins-official · commit-commands](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/commit-commands/README.md)：本仓库中 `git-commit`、`git-push-pr`、`git-clean-gone` 的来源参考
 
 ### 未用
 

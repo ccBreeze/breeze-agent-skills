@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit"
+  short_description: "审查当前改动、整理提交范围并生成可靠的 Git 提交"
+  default_prompt: "Use $git-commit to review the current repo changes, stage only the task-related files, and create a clear commit message."
