@@ -6,10 +6,11 @@
 
 | Skill                  | 描述                                          |
 | ---------------------- | --------------------------------------------- |
-| `commit`               | 分析暂存区变更，生成符合规范的 commit message |
 | `doc-writer`           | 新建与维护 VitePress 文档页面                 |
 | `doc-image-maintainer` | 迁移、重命名并清理 Markdown 图片资源          |
 | `generate-drawio`      | 根据代码或描述生成 DrawIO 架构流程图          |
+
+> 提交信息生成改用官方 [`commit-commands`](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/commit-commands/README.md) skill，详见下文「推荐 Skills · 配置与协作规范」。
 
 ## 安装
 
@@ -45,8 +46,6 @@ Fetch and follow instructions from https://raw.githubusercontent.com/ccBreeze/br
 └── INSTALL.md         # Codex 全局安装指引
 .agents/
 └── skills/
-    ├── commit/
-    │   └── SKILL.md
     ├── doc-writer/
     │   ├── SKILL.md
     │   ├── agents/
