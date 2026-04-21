@@ -18,18 +18,7 @@
 - 第三条结果或改动
 ```
 
-示例：
-
-```text
-chore(monorepo): 通过 catalog 统一剩余硬编码依赖版本
-
-- 使用 codemod 迁移硬编码版本到 catalog
-- 新增 pnpm Workspace 与 Catalog 指南文档
-- sidebar 注册新文档入口
-```
-
 ## 使用时机
 
-- 当前仓库为 `breeze-agent-skills`
-- 用户明确要求 commit body 使用 `- ` 列表
-- 已观察到仓库现有提交明确采用这一格式，并希望延续
+- body 中的每一条说明都使用 `- ` 开头的列表项单独表达
+- 如果本次提交不需要 body，可以只写标题行，不必补空正文
