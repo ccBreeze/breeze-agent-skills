@@ -1,41 +1,45 @@
-# 本地补充约定（非官方）
+---
+name: commit
+description: 分析暂存区变更，生成符合规范的 commit message 并提交代码。
+---
 
-本文档用于补充 `git-commit` 技能在本地协作中的 commit message 默认格式要求。
-除非用户、仓库文档或项目现有历史提交已经明确给出其他规范，否则可优先采用本文档中的约定。
+# Git Commit
 
-如果当前仓库存在更具体的提交约定，应以仓库内约定为准；本文档作为默认回退规则使用。
+## 流程
 
-## Commit Message 格式
+1. 执行 `git status` 和 `git diff --cached` 查看暂存区变更
+2. 执行 `git log --oneline -5` 参考最近的提交风格
+3. 根据变更内容生成 commit message
+4. 确认后执行提交
 
-commit title 与 body 默认使用简体中文表达。
-若用户未另行指定，避免使用英文标题或英文正文描述改动。
+## Commit Message 规范
 
-## Commit Body 格式
+遵循 Conventional Commits 格式：`<type>(<scope>): <description>`
 
-当提交信息需要正文时，正文使用 `- ` 开头的列表项表达，每行一条完整信息。
-不要写成普通段落，也不要混用段落和列表。
-不同列表项之间不要额外插入空行，保持紧凑的连续列表。
+### description（首行）
 
-推荐形式：
+- 只概括核心改动，一句话说明意图
+- 不要堆砌细节、包名、文件名
+
+### body（正文）
+
+- 用于列举补充说明，分条书写
+- 保持简洁概括，不要罗列从 diff 中即可看到的具体名称（如包名、文件名）
+
+### 禁止项
+
+- **禁止**在 commit message 末尾追加 `Co-Authored-By: Claude ...` 等署名行
+- **禁止**添加 `Generated with Claude Code` 之类的工具生成标识
+- **禁止**把 heredoc 的 `EOF` 结束符等 shell 语法残留写进 message
+
+commit message 必须保持干净，只包含 `<type>(<scope>): <description>` 首行和可选的分条 body。
+
+### 示例
 
 ```text
-<type>(<scope>): 中文标题
+chore(monorepo): 通过 catalog 统一剩余硬编码依赖版本
 
-- 第一条结果或改动
-- 第二条结果或改动
-- 第三条结果或改动
+- 使用 codemod 迁移硬编码版本到 catalog
+- 新增 pnpm Workspace 与 Catalog 指南文档
+- sidebar 注册新文档入口
 ```
-
-示例：
-
-```text
-fix(dev): 端口占用时快速失败并输出清理命令
-
-- 为共享 Vite 开发服务启用 strictPort，避免端口被占时静默切换
-- 在 dev 启动失败后打印端口清理命令，并从各应用配置动态解析端口
-```
-
-## 使用时机
-
-- body 中的每一条说明都使用 `- ` 开头的列表项单独表达
-- 如果本次提交不需要 body，可以只写标题行，不必补空正文
